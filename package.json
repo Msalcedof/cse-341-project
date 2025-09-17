@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Msalcedof/cse-341-project#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongodb": "^6.19.0"
   }
 }
