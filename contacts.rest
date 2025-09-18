@@ -1,0 +1,9 @@
+### Get all contacts
+GET https://your-app.onrender.com/contacts
+Content-Type: application/json
+
+###
+
+### Get one contact by ID (replace with a real ID)
+GET https://your-app.onrender.com/contacts/search?id=656b882e7fa6beae6ef1f8f3
+Content-Type: application/json
