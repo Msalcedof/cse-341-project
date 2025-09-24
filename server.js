@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const setupSwagger = require('./swagger');
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const app = express();
@@ -12,7 +13,7 @@ let db;
 async function startServer() {
   try {
     await client.connect();
-    db = client.db(); // ✅ Automatically uses the DB from your connection string
+    db = client.db(); // Automatically uses the DB from your connection string
 
     console.log('Connected to MongoDB');
 
@@ -23,6 +24,7 @@ async function startServer() {
     });
 
     app.use(express.json());
+    setupSwagger(app);
     app.use('/contacts', require('./routes/contacts'));
 
     // Optional: add a root route so "/" doesn't show "Cannot GET /"

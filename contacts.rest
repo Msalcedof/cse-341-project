@@ -1,9 +1,42 @@
 ### Get all contacts
-GET https://your-app.onrender.com/contacts
+GET https://project-de69.onrender.com/contacts
 Content-Type: application/json
 
 ###
 
-### Get one contact by ID (replace with a real ID)
-GET https://your-app.onrender.com/contacts/search?id=656b882e7fa6beae6ef1f8f3
+### Get one contact by ID (Marco)
+GET https://project-de69.onrender.com/contacts/search?id=68c888eeea76fabae95e1f83
 Content-Type: application/json
+
+###
+
+### Create a new contact
+POST https://project-de69.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Ana",
+  "lastName": "Lopez",
+  "email": "ana.lopez@example.com",
+  "favoriteColor": "green",
+  "birthday": "1990-05-12"
+}
+
+###
+
+### Update Marco's contact
+PUT https://project-de69.onrender.com/contacts/68c888eeea76fabae95e1f83
+Content-Type: application/json
+
+{
+  "firstName": "Marco",
+  "lastName": "Salcedo",
+  "email": "marco.updated@example.com",
+  "favoriteColor": "blue",
+  "birthday": "1991-10-13"
+}
+
+###
+
+### Delete Wendy's contact
+DELETE https://project-de69.onrender.com/contacts/68c88ab9ea76fabae95e1fb7
